@@ -1,14 +1,32 @@
-﻿!u::                            ; alt + u
-Send, gustavo.selman@uc.cl
+﻿; Lee el contenido del archivo JSON
+FileRead, JsonData, config.json
+
+; Parsea el contenido JSON
+Json := JSON.Parse(JsonData)
+
+; Asigna las variables a partir del objeto JSON
+mail_uc := Json.mail_uc
+mail_gmail := Json.mail_gmail
+name := Json.name
+
+!u:: ; Alt + u
+    Send, %mail_uc%
 return
 
-!g::                            ; alt + g
-Send, selmangustavo@gmail.com
+!g:: ; Alt + g
+    Send, %mail_gmail%
 return
 
-!n::                            ; alt + m
-Send, Gustavo Selman Valenzuela
+!n:: ; Alt + n
+    Send, %name%
 return
+
+; print the name in a popup for test if name is working in the json
+test() {
+    MsgBox, %name%
+}
+
+test()
 
 ; Remap Esc to Capslock
 Esc::Capslock
@@ -48,7 +66,7 @@ return
 !+h::Send ^{Left}	; Alt + Shift + h -> Ctrl + Left
 !+l::Send ^{Right}	; Alt + Shift + l -> Ctrl + Right
 
-!e::Send #{Up}  	; Alt + e 	  -> Win + Up		(Maximizar)
+!e::Send #{Up} 	; Alt + e 	  -> Win + Up		(Maximizar)
 !w::Send #{Down}	; Alt + w	  -> Win + Down         (Minimizar)
 !q::Send #{Left}	; Alt + q	  -> Win + Left         (Ventana a la izquierda)
 !r::Send #{Right}	; Alt + r	  -> Win + Right        (Ventana a la derecha)
@@ -64,7 +82,6 @@ return
 ::sad::😥
 ::relax::😌
 
-
 ; Numpad0 & Numpad1::
 ; MsgBox, You pressed Numpad1 while holding down Numpad0.
 ; return
@@ -78,5 +95,4 @@ return
 ; !+c::
 ; Run, "Control Panel\Hardware and Sound\Power Options\System Settings"
 ; return
-
 

@@ -1,12 +1,10 @@
-; Programa que remapea la tecla de Bloq Mayús para que funcione como Esc cuando se presiona sola, y como Control cuando se presiona en conjunto con otra tecla
+; AutoHotkey script to map 
+; - Caps Lock to Escape when it's pressed on its own
+; - Ctrl when used in combination with another key
 
 g_LastCtrlKeyDownTime := 0
 g_AbortSendEsc := false
 g_ControlRepeatDetected := false
-
-; AutoHotkey script to map 
-; - Caps Lock to Escape when it's pressed on its own
-; - Ctrl when used in combination with another key
 
 *CapsLock::
     if (g_ControlRepeatDetected)
@@ -19,7 +17,7 @@ g_ControlRepeatDetected := false
     g_AbortSendEsc := false
     g_ControlRepeatDetected := true
 
-    return
+return
 
 *CapsLock Up::
     send,{Ctrl up}
@@ -34,7 +32,7 @@ g_ControlRepeatDetected := false
     {
         SendInput {Esc}
     }
-    return
+return
 
 ~*^a::
 ~*^b::
@@ -85,7 +83,7 @@ g_ControlRepeatDetected := false
 ~*^,::
 ~*^.::
 ~*^/::
-~*^;::
+    ~*^;::
 ~*^'::
 ~*^[::
 ~*^]::
@@ -106,4 +104,4 @@ g_ControlRepeatDetected := false
 ~*^F11::
 ~*^F12::
     g_AbortSendEsc := true
-    return 
+return 
