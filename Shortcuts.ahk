@@ -1,32 +1,18 @@
-﻿; Lee el contenido del archivo JSON
-FileRead, JsonData, config.json
-
-; Parsea el contenido JSON
-Json := JSON.Parse(JsonData)
-
-; Asigna las variables a partir del objeto JSON
-mail_uc := Json.mail_uc
-mail_gmail := Json.mail_gmail
-name := Json.name
+﻿#Include %A_ScriptDir%\GetConstant.ahk ; Ruta completa
 
 !u:: ; Alt + u
-    Send, %mail_uc%
+    Send, % GetConstant("university_mail")
 return
 
 !g:: ; Alt + g
-    Send, %mail_gmail%
+    Send, % GetConstant("personal_mail")
 return
 
 !n:: ; Alt + n
-    Send, %name%
+    Send, % GetConstant("full_name")
 return
 
-; print the name in a popup for test if name is working in the json
-test() {
-    MsgBox, %name%
-}
-
-test()
+; ------------------ Remap keys ------------------
 
 ; Remap Esc to Capslock
 Esc::Capslock

@@ -1,22 +1,23 @@
 ; Get Constant from INI file
 
-; Especifica el archivo INI
-IniFile = config.ini
-Path = %A_ScriptDir%\%IniFile%
+GetConstant(Key) {
+    ; Especifica el archivo INI
+    ConstantsFile = constants.ini
+    Path = %A_ScriptDir%\%ConstantsFile%
 
-; Especifica la sección y la clave que deseas leer
-Section = Settings
-Key = name
+    ; Especifica la sección del archivo INI
+    Section = Constants
 
-; Establece un valor predeterminado en caso de que la clave no se encuentre
-Default := "ValorPredeterminado"
+    ; Establece un valor predeterminado en caso de que la clave no se encuentre
+    Default := "KeyNotFound"
 
-; Lee el valor desde el archivo INI
-IniRead, OutputVar, %Path%, Settings, nombre, % Default
+    ; Lee el valor desde el archivo INI
+    IniRead, OutputVar, %Path%, Constants, %Key%, %Default%
 
-; Comprueba si se encontró un valor válido y muestra un mensaje
-if (OutputVar = "ValorPredeterminado") {
-    MsgBox, La clave %Key% no se encontró en la sección %Section% del archivo INI.
-} else {
-    MsgBox, El valor de la clave "%Key%" es "%OutputVar%".
+    ; Comprueba si se encontró un valor válido y muestra un mensaje
+    if (OutputVar = "KeyNotFound") {
+        MsgBox, No se encontró la clave %Key% en el archivo %ConstantsFile%.
+    } else {
+        return OutputVar
+    }
 }
