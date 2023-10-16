@@ -4,4 +4,4 @@ Welcome to a collection of handy shortcuts meticulously crafted with AutoHotkey.
 
 ## Getting Started
 
-Crete the constants.ini file in the root directory and add the following:
+Duplicate de constants.example.ahk file and rename it to constants.ahk. Then, fill in the values with your own.
