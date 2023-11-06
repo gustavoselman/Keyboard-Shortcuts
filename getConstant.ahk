@@ -9,10 +9,10 @@ GetConstant(Key) {
     Section = Constants
 
     ; Establece un valor predeterminado en caso de que la clave no se encuentre
-    Default := "KeyNotFound"
+    Default = "KeyNotFound"
 
     ; Lee el valor desde el archivo INI
-    IniRead, OutputVar, %Path%, Constants, %Key%, %Default%
+    IniRead, OutputVar, %Path%, %Section% , %Key%, %Default% 
 
     ; Comprueba si se encontró un valor válido y muestra un mensaje
     if (OutputVar = "KeyNotFound") {

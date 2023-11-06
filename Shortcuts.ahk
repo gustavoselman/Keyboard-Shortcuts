@@ -1,4 +1,4 @@
-﻿#Include %A_ScriptDir%\GetConstant.ahk ; Ruta completa
+﻿#Include %A_ScriptDir%\GetConstant.ahk
 
 !u:: ; Alt + u
     Send, % GetConstant("university_mail")
