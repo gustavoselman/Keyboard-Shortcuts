@@ -1,20 +1,21 @@
 ﻿#Include %A_ScriptDir%\GetConstant.ahk
-
-; Alt + u
-!u::Send, % GetConstant("university_mail") 
-
-; Alt + g
-!g::Send, % GetConstant("personal_mail") 
+#Include %A_ScriptDir%\CapsLockCtrlEscape.ahk
 
 ; Alt + n
 !n::Send, % GetConstant("full_name") 
 
+; Alt + g
+!g::Send, % GetConstant("personal_mail") 
+
+; Alt + u
+!u::Send, % GetConstant("university_mail") 
+
 ; ------------------ Remap keys ------------------
 
-; Remap Esc to Capslock
+; Remap 'Esc' to 'Caps Lock'
 Esc::Capslock
 
-; Remap Alt + Capslock to Capslock
+; Remap 'Alt + Caps Lock' to 'Caps Lock'
 !Capslock::Capslock
 
 ; Remap 'Alt + m' to delete backward

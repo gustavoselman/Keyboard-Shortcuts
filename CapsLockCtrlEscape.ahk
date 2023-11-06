@@ -1,6 +1,6 @@
 ; AutoHotkey script to map 
-; - Caps Lock to Escape when it's pressed on its own
-; - Ctrl when used in combination with another key
+; - 'Caps Lock' to 'Esc' when it's pressed on its own
+; - 'Ctrl' when used in combination with another key
 
 g_LastCtrlKeyDownTime := 0
 g_AbortSendEsc := false
