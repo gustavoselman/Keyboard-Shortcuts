@@ -1,5 +1,5 @@
-﻿#Include %A_ScriptDir%\GetConstant.ahk
-#Include %A_ScriptDir%\CapsLockCtrlEscape.ahk
+﻿#Include %A_ScriptDir%\CapsLockCtrlEscape.ahk
+#Include %A_ScriptDir%\GetConstant.ahk
 
 ; Alt + n
 !n::Send, % GetConstant("full_name") 
@@ -48,10 +48,8 @@ Esc::Capslock
 !+h::Send ^{Left}	; Alt + Shift + h -> Ctrl + Left
 !+l::Send ^{Right}	; Alt + Shift + l -> Ctrl + Right
 
-!e::Send #{Up} 	; Alt + e 	  -> Win + Up		(Maximizar)
+!e::Send #{Up} 	 ; Alt + e 	  -> Win + Up		    (Maximizar)
 !w::Send #{Down}	; Alt + w	  -> Win + Down         (Minimizar)
-!q::Send #{Left}	; Alt + q	  -> Win + Left         (Ventana a la izquierda)
-!r::Send #{Right}	; Alt + r	  -> Win + Right        (Ventana a la derecha)
 
 ; ------------ EMOJIS ------------
 ::1313::😏
