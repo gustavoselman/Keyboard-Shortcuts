@@ -26,4 +26,4 @@ There are many ways to customize your Ubuntu experience. This is the easiest way
 | `Alt`+`H`  | `xdotool key --clearmodifiers Left` | Left arrow key |
 | `Alt`+`I`  | `xdotool key --clearmodifiers Home` | Home key |
 | `Alt`+`O`  | `xdotool key --clearmodifiers End` | End key |
-| `Alt`+`T`  | `https://web.whatsapp.com/` | Open Whatsapp Web |
+| `Alt`+`T`  | `brave-browser https://web.whatsapp.com/` | Open Whatsapp Web |
