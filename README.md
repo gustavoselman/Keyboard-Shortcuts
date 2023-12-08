@@ -8,8 +8,8 @@ This repository is a collection of personalized keyboard shortcuts designed to s
 
 ## Repository Contents
 
-- [**Ubuntu Shortcuts:**](./ubuntu-shortcuts/README-UBUNTU.md) Discover customizable commands and shortcuts to optimize your Ubuntu experience.
-- [**Windows Shortcuts:**](./windows-shortcuts/README-WINDOWS.md) Explore an array of time-saving AutoHotkey scripts tailored for Windows users.
+- [**Ubuntu Shortcuts:**](./ubuntu-shortcuts/README.md) Discover customizable commands and shortcuts to optimize your Ubuntu experience.
+- [**Windows Shortcuts:**](./windows-shortcuts/README.md) Explore an array of time-saving AutoHotkey scripts tailored for Windows users.
 
 ## Getting Started
 
