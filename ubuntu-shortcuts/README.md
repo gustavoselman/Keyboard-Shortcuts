@@ -4,6 +4,12 @@
 
 There are many ways to customize your Ubuntu experience. This is the easiest way to do it in Ubuntu 20.04 LTS, using only the built-in keyboard shortcut settings.
 
+## Install dependencies :package:
+
+```bash
+sudo apt install xdotool
+```
+
 ## Instructions :memo:
 
 1. Open the Ubuntu **Settings**.
