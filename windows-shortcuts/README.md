@@ -1,4 +1,4 @@
-# Windows Keyboard Shortcuts with AutoHotkey
+# Windows Keyboard Shortcuts
 
 ## With AutoHotkey ⌨️
 
